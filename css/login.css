@@ -1,20 +1,4 @@
-/* Header */
 
-.header{
-    margin: 0 4%;
-}
-
-.header__container{
-    display: flex;
-    height: 4rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header__container__img{
-    display: flex;
-    align-items: center;
-}
 
 /* Login */
 
