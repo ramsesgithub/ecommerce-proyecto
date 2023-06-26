@@ -1,0 +1,116 @@
+/* Footer */
+
+.footer{
+    background-color: #EAF2FD;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.footer__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.footer__contenido__img{
+    display: flex;
+    align-items: center;
+}
+
+.footer__contenido__parrafo{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3rem;
+}
+
+.footer__contenido__parrafo--des{
+    color: #464646;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--open-sans);
+    font-weight: 600;
+}
+
+.footer__contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__contacto__form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.footer__contacto__form--nom{
+    height: 1.9rem;
+    color: #818181;
+    font-size: 0.75rem;
+    font-family: var(--roboto);
+    border-radius: 4px;
+    border: none;
+    padding: 0.5rem;
+
+    outline: none;
+}
+
+.footer__contacto--hable{
+    font-family: var(--open-sans);
+}
+
+.footer__contacto__form--nom::placeholder{
+    color: #525252;
+    font-size: .8rem;
+
+}
+
+.footer__contacto__form--men{
+    height: 4.9rem;
+    color: #818181;
+    font-size: 0.75rem;
+    font-family: var(--roboto);
+    border-radius: 4px;
+    border: none;
+    padding: 0 .4rem ;
+    outline: none;
+}
+
+.footer__contacto__form--men::placeholder{
+    color: #525252;
+    font-size: .8rem;
+}
+
+.footer__contacto__form--bot{
+    background: var(--color-azul);
+    border: none;
+    color: #fff;
+    font-family: var(--open-sans);
+    font-size: .8rem;
+}
+
+.rodapie{
+    row-gap: 1rem;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodapie--p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: var(--roboto);
+}
+
+.rodapie__contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

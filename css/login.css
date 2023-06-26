@@ -15,3 +15,46 @@
     display: flex;
     align-items: center;
 }
+
+/* Login */
+
+.login{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__sesion{
+    margin-bottom: .8rem;
+    text-align: center;
+    font-family: var(--roboto);
+}
+
+.login__form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.login__form--input{
+    width: 90%;
+    border-radius: .3rem;
+    height: 2.6rem;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(20, 20, 20, 0.384);
+}
+
+.login__form--input::placeholder{
+    font-family: var(--open-sans);
+    font-size: 1rem;
+}
+
+.login__form--boton{
+    border: none;
+    background-color: var(--color-azul);
+    color: #FFF;
+    font-family: var(--open-sans);
+}
