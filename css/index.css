@@ -141,6 +141,7 @@
     font-size: 0.875rem;
     font-family: var(--open-sans);
     font-weight: 700;
+    cursor: pointer;
 }
 
 
