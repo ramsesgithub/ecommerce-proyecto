@@ -1,0 +1,17 @@
+.producto__container__admin{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.producto__container__contenido__admin{
+    width: 8rem;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}

@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek | Todos los productos</title>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/admin_productos/main.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/todos_los_productos/main.css">
+    <link rel="shortcut icon" href="./assets/sports_esports_black_24dp 1.svg" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -26,10 +30,11 @@
     </header>
     <main>
         <section class="producto">
-            <div class="producto__title">
+            <div class="producto__title_admin">
                 <h2 class="producto__titulo--prod">Todos los productos</h2>
+                <a href="" class="producto__title_admin--a">Agregar Producto</a>
             </div>
-            <div class="producto__container__all">
+            <div class="producto__container__admin">
             </div>
         </section>
     </main>
@@ -66,6 +71,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../controllers/products_controller.js"></script>
+    <script type="module" src="../controllers/admin_products.js"></script>
 </body>
 </html>

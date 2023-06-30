@@ -3,9 +3,12 @@ import { crearProducto } from "./product_controller.js";
 
 const divAll = document.querySelector(".producto__container__all");
 
-productServices.listaProductos().then(data => {
+const mostrarTodosProductos = async () =>{
+    const data = await productServices.listaProductos();
     data.forEach(({nombre, precio, descripcion, imagen, id, categoria})=>{
         const nuevosProductos = crearProducto (nombre, precio, descripcion, imagen, id, categoria);
         divAll.append(nuevosProductos);
     })
-});
+} 
+
+mostrarTodosProductos();
