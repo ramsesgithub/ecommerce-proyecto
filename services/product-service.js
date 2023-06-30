@@ -1,4 +1,4 @@
-const listaProductos = () => fetch("http://localhost:3000/productos").then(respuesta => respuesta.json());
+const listaProductos = async () => {const data = await fetch("https://my-json-server.typicode.com/ramsesgithub/Api_Ecommerce/productos"); return data.json();} 
 
 
 

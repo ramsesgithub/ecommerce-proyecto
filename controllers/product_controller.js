@@ -1,7 +1,7 @@
 import { productServices } from "../services/product-service.js";
 
 
-const crearProducto = (nombre, precio, id, imagen, categoria, descripcion) => {
+export const crearProducto = (nombre, precio, id, imagen, categoria, descripcion) => {
     const div = document.createElement("div");
     div.classList.add("producto__container__contenido");
     const contenido = `
@@ -16,31 +16,27 @@ const crearProducto = (nombre, precio, id, imagen, categoria, descripcion) => {
     return div;
 }
 
-const divPadre = document.querySelectorAll(".producto__container");
+const celulares = document.querySelector("#container1");
+const notebooks = document.querySelector("#container2");
+const tablets = document.querySelector("#container3");
 
-productServices.listaProductos().then(data => {
-    data.forEach(({nombre, precio, descripcion, imagen, id, categoria}) => {
-        //Imprimir datos en el index
-        if(categoria === "Celulares"){
-            const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
-            divPadre[0].appendChild(nuevoProducto);
-        }
-        else if(categoria === "Notebook"){
-            const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
-            divPadre[1].appendChild(nuevoProducto);
-        }
-        else if(categoria === "Tablet"){
-            const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
-            divPadre[2].appendChild(nuevoProducto);
-        }
-    });
-});
+const mostrarProductos = async () => {
+    const data = await productServices.listaProductos()
+        data.forEach(product =>{
+            //Mostrar productos en el index
+            if(product.categoria === "Celulares"){
+                const nuevoProducto = crearProducto(product.nombre, product.precio, product.descripcion, product.imagen, product.id, product.categoria);
+                celulares.append(nuevoProducto);
+            }
+            else if(product.categoria === "Notebook"){
+                const nuevoProducto = crearProducto(product.nombre, product.precio, product.descripcion, product.imagen, product.id, product.categoria);
+                notebooks.append(nuevoProducto);
+            }
+            else if(product.categoria === "Tablet"){
+                const nuevoProducto = crearProducto(product.nombre, product.precio, product.descripcion, product.imagen, product.id, product.categoria);
+                tablets.append(nuevoProducto);
+            }
+        });
+}
 
-
-const divAll = document.querySelector(".producto__container__all");
-productServices.listaProductos().then(data => {
-    data.forEach(({nombre, precio, descripcion, imagen, id, categoria})=>{
-        const nuevosProductos = crearProducto (nombre, precio, descripcion, imagen, id, categoria);
-        divAll.appendChild(nuevosProductos)
-    })
-})
+mostrarProductos();
