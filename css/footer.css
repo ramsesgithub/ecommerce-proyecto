@@ -60,6 +60,7 @@
 }
 
 .footer__contacto--hable{
+    font-weight: bold;
     font-family: var(--open-sans);
 }
 

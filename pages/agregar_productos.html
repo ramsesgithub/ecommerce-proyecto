@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto - AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/agregar_productos/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="shortcut icon" href="../assets/sports_esports_black_24dp 1.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__container__img">
+                <a href="../index.html"><img src="../assets/sports_esports_black_24dp 1.png" alt=""></a>
+                <a href="../index.html"><img src="../assets/Texto.png" alt=""></a>
+            </div>
+            <div>
+                <img src="../assets/Icone.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2 class="nuevo">Agregar nuevo producto</h2>
+            <form class="form">
+                <div class="form__agregar">
+                    <div class="form__agregar__area">
+                        <h2>Arrastra una imagen y suelta</h2>
+                    </div>
+                    <p class="form__agregar-p">O</p>
+                    <div class="form__agregar__seleccionar">
+                        <label for="file" class="form__agregar__seleccionar-img">Seleccionar Imagen</label>
+                        <input class="form__agregar__seleccionar-file file" id="file" type="file">
+                    </div>
+                </div>
+                <div class="form__container">
+                    <p class="form__container-cat">Categoria</p>
+                    <select class="form__container__select">
+                        <option >Celular</option>
+                        <option >Notebook</option>
+                        <option>Tablet</option>
+                    </select>
+                </div>
+                <div class="form__container">
+                    <input data-nombre class="form__container-input" id="form__name" type="text" name="nombre" placeholder="Nombre del producto" required >
+                    <span class="form__container-error">Este campo no es valido</span>
+                </div>
+                <div class="form__container">
+                    <input data-precio class="form__container-input" id="form__name" type="text" name="precio" placeholder="Precio del producto" required >
+                    <span class="form__container-error">Este campo no es valido</span>
+                </div>
+                <div class="form__container">
+                    <textarea data-descripcion class="form__container-text" id="form__name" name="descripcion" placeholder="Descripcion del producto" required ></textarea>
+                    <span class="form__container-error">Este campo no es valido</span>
+                </div>
+                <button class="form-submit" type="submit">Agregar Producto</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__contenido">
+                <div class="footer__contenido__img">
+                    <img src="../assets/sports_esports_black_24dp 1.svg" alt="">
+                    <img src="../assets/Texto.svg" alt="">
+                </div>
+                <div class="footer__contenido__parrafo">
+                    <p class="footer__contenido__parrafo--des">Quienes Somos</p>
+                    <p class="footer__contenido__parrafo--des">Política de privacidad</p>
+                    <p class="footer__contenido__parrafo--des">Programa de fidelidad</p>
+                    <p class="footer__contenido__parrafo--des">Nuestras tiendas</p>
+                    <p class="footer__contenido__parrafo--des">Quiero ser franquiciado</p>
+                    <p class="footer__contenido__parrafo--des">Anúncie aqui</p>
+                </div>
+            </div>
+            <div class="footer__contacto">
+                <h3 class="footer__contacto--hable">Hable con nosotros</h3>
+                <form class="footer__contacto__form">             
+                        <input class="footer__contacto__form--nom" type="text" id="name" placeholder="Nombre">            
+                        <input class="footer__contacto__form--men" type="text" id="mesagge"placeholder="Escribe tu mensaje">         
+                        <button class="boton footer__contacto__form--bot">Enviar mensaje</button>         
+                </form>
+            </div>
+        </div>
+        <div class="rodapie">
+            <p class="rodapie--p">Desarrollado por Ramsés Quinteros 2023 </p>
+            <div class="rodapie__contacto">
+                <a href="https://github.com/ramsesgithub" target="_blank"><img src="../assets/GitHub.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="../assets/LinkedIn.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/drag_drop.js"></script>
+    <script type="module" src="../controllers/agregar_controller.js"></script>
+</body>
+</html>

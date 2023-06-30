@@ -1,3 +1,18 @@
+.producto__title_admin--h2{
+    font-family: var(--roboto);
+    font-size: 1.2rem;
+}
+
+.producto__title_admin--a{
+    border: none;
+    margin-top: .6rem;
+    padding: 1rem;
+    font-size: .9rem;
+    color: #fff;
+    font-family: var(--open-sans);
+    background-color: var(--color-azul);
+}
+
 .producto__container__admin{
     margin-top: 1rem;
     display: flex;
