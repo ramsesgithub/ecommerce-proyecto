@@ -5,6 +5,7 @@
 
 .producto__title_admin--a{
     border: none;
+    cursor: pointer;
     margin-top: .6rem;
     padding: 1rem;
     font-size: .9rem;

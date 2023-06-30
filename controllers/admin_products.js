@@ -5,7 +5,7 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
     div.classList.add("producto__container__contenido__admin");
     const contenido = `
         <div>
-            <a><img src="../assets/delete.svg"></a>
+            <a class="producto__container__contenido__admin-a" id="${id}"><img src="../assets/delete.svg"></a>
             <a><img src="../assets/edit.svg"></a>
             <img class="producto__container__contenido--img" src="${imagen}" alt="">
         </div>
@@ -14,6 +14,14 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
         <p class="producto__container__contenido-pre">#${id}</p>
     `
     div.innerHTML = contenido;
+    const aEliminar = div.querySelector(".producto__container__contenido__admin-a");
+    /* Funcion eliminar producto */
+    aEliminar.addEventListener("click", e => {
+        const id = aEliminar.id;
+        let confirmar = confirm(`DESEAS ELIMIANR ${nombre} ? `);
+        if(confirmar) productServices.eliminarProducto(id);
+    });
+
     return div;
 }
 

@@ -4,14 +4,30 @@ const crearProducto = (nombre, precio, descripcion, imagen, categoria) => {
     return fetch("http://localhost:3000/productos",{
         method:"POST",
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type": "application/json"
         },
         body:JSON.stringify({nombre, precio, descripcion, imagen, categoria,id:uuid.v4()})
     })
 }
 
 
+const eliminarProducto = (id) => {
+    return fetch(`http://localhost:3000/productos/${id}`, {
+    method: "DELETE"
+    });
+};
+
+
+const detalleProducto= id => {
+    return fetch(`http://localhost:3000/productos/${id}`).then(responde => responde.json())
+}
+
+
+
+
 export const productServices = {
     listaProductos,
     crearProducto,
+    detalleProducto,
+    eliminarProducto,
 }
