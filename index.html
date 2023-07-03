@@ -15,9 +15,10 @@
 </head> 
 <body>
     <header class="header">
+        <img src="./assets/Logo.png" alt="Logo AluraGeek">
         <div class="header__container">
-            <img src="./assets/Logo.png" alt="Logo AluraGeek">
             <button class="header__container--login boton"><a class="header__container--login-a" href="./pages/login.html">Login</a></button>
+            <input type="search" id="buscar">
             <img src="./assets/Icone.png" alt="">
         </div>
     </header>
@@ -37,7 +38,7 @@
                     <img src="./assets/arrow_back_black_24dp 1.svg" alt="">
                 </div>
             </div>
-            <div class="producto__container" id="container1">
+            <div class="producto__container cards" id="container1">
             </div>
         </section>
         <section class="producto2">
@@ -48,7 +49,7 @@
                     <img src="./assets/arrow_back_black_24dp 1.svg" alt="">
                 </div>
             </div>
-            <div class="producto__container" id="container2">
+            <div class="producto__container cards" id="container2">
             </div>
         </section>
         <section class="producto3">
@@ -59,7 +60,7 @@
                     <img src="./assets/arrow_back_black_24dp 1.svg" alt="">
                 </div>
             </div>
-            <div class="producto__container" id="container3">
+            <div class="producto__container cards" id="container3">
             </div>
         </section>
     </main>
@@ -97,5 +98,6 @@
         </div>
     </footer>
     <script type="module" src="./controllers/product_controller.js"></script>
+    <script src="./js/busqueda_producto.js"></script>
 </body>
 </html>
