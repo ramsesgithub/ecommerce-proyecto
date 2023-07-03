@@ -1,0 +1,66 @@
+.footer__contacto__form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.footer__contacto__form__container{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.footer__contacto__form__container-nom{
+    height: 1.9rem;
+    color: #818181;
+    font-size: 0.75rem;
+    font-family: var(--roboto);
+    border-radius: 4px;
+    border: none;
+    padding: 0.5rem;
+
+    outline: none;
+}
+
+.footer__contacto__form__container-nom::placeholder{
+    color: #525252;
+    font-size: .8rem;
+
+}
+
+.footer__contacto__form__container-men{
+    height: 4.9rem;
+    color: #818181;
+    font-size: 0.75rem;
+    font-family: var(--roboto);
+    border-radius: 4px;
+    border: none;
+    padding: 0 .4rem ;
+    outline: none;
+}
+
+.footer__contacto__form__container-men::placeholder{
+    color: #525252;
+    font-size: .8rem;
+}
+
+.footer__contacto__form__container-err{
+    display: none;
+}
+
+.footer__contacto__form__container--invalid .footer__contacto__form__container-err {
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--montserrat);
+    color: #fc0b0b;
+}
+
+
+.footer__contacto__form__container-btn{
+    background: var(--color-azul);
+    border: none;
+    height: 2rem;
+    color: #fff;
+    font-family: var(--open-sans);
+    font-size: .8rem;
+}

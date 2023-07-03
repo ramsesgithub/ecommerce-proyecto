@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek | Todos los productos</title>
+    <title>Todos los producto | AluraGeek</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/css/busqueda_produtos/style.css">
+    <link rel="stylesheet" href="/css/formulario.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/todos_los_productos/main.css">
 </head>
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__container__img">
-                <a href="../index.html"><img src="../assets/sports_esports_black_24dp 1.png" alt=""></a>
-                <a href="../index.html"><img src="../assets/Texto.png" alt=""></a>
-            </div>
-            <div>
-                <img src="../assets/Icone.png" alt="">
-            </div>
+            <img src="../assets/Logo.png" alt="Logo AluraGeek">
+            <button class="header__container--login boton"><a class="header__container--login-a" href="/pages/login.html">Login</a></button>
+        </div>
+        <div class="header__container">
+            <input type="text" class="header__container-input" id="buscar">
+            <img src="../assets/Icone.png" alt="">
         </div>
     </header>
     <main>
@@ -51,10 +52,16 @@
             </div>
             <div class="footer__contacto">
                 <h3 class="footer__contacto--hable">Hable con nosotros</h3>
-                <form class="footer__contacto__form">             
-                        <input class="footer__contacto__form--nom" type="text" id="name" placeholder="Nombre">            
-                        <input class="footer__contacto__form--men" type="text" id="mesagge"placeholder="Escribe tu mensaje">         
-                        <button class="boton footer__contacto__form--bot">Enviar mensaje</button>         
+                <form class="footer__contacto__form">  
+                    <div class="footer__contacto__form__container">
+                        <input class="footer__contacto__form__container-nom form-input" data-tipo="nombre" type="text" id="name" required  pattern="[a-zA-Z ]{2,50}" placeholder="Nombre">            
+                        <span class="footer__contacto__form__container-err">Este campo no es valido</span>
+                    </div>           
+                    <div class="footer__contacto__form__container">
+                        <textarea class="footer__contacto__form__container-men form-input" data-tipo="mensaje" id="mesagge" required placeholder="Escribe tu mensaje"></textarea>        
+                        <span class="footer__contacto__form__container-err">Este campo no es valido</span>
+                    </div>
+                        <button class="footer__contacto__form__container-btn">Enviar mensaje</button>         
                 </form>
             </div>
         </div>
@@ -67,5 +74,7 @@
         </div>
     </footer>
     <script type="module" src="../controllers/products_controller.js"></script>
+    <script src="../js/busqueda_producto.js"></script>
+    <script src="../js/formularios.js"></script>
 </body>
 </html>

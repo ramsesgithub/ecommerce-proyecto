@@ -1,5 +1,20 @@
 .filter{
-    visibility: hidden;
+    /* visibility: hidden;
     opacity: 0;
-    order: 1;
+    order: 1; */
+    display: none;
+}
+
+.header__container-input{
+    outline: none;
+}
+
+.header__container{
+    outline: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__container:first-child{
+    justify-content: space-evenly;
 }
