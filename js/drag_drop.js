@@ -6,7 +6,7 @@ let file;
 
 inputFile.addEventListener("change", function(){
     file = this.files[0];
-    dropArea.style.display="block";
+    dropArea.style.display="flex";
     mostrarImagen(file);
 })
 

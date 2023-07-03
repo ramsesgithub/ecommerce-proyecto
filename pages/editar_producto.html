@@ -31,7 +31,7 @@
     <main>
         <section>
             <h2 class="nuevo">Agregar nuevo producto</h2>
-            <form class="form">
+            <form class="form" id="formActualizar">
                 <div class="form__agregar">
                     <div class="form__agregar__area">
                         <h2>Arrastra una imagen y suelta</h2>
@@ -44,19 +44,19 @@
                 </div>
                 <div class="form__container">
                     <p class="form__container-cat">Categoria</p>
-                    <select class="form__container__select">
-                        <option >Celular</option>
+                    <select class="form__container__select" id="selectProductos">
+                        <option >Télefono</option>
                         <option >Notebook</option>
                         <option>Tablet</option>
                         <option>Otro</option>
                     </select>
                 </div>
                 <div class="form__container">
-                    <input data-nombre class="form__container-input" id="form__name" type="text" name="nombre" placeholder="Nombre del producto" required >
+                    <input data-nombre id="nombreProducto" class="form__container-input" id="form__name" type="text" name="nombre" placeholder="Nombre del producto" required >
                     <span class="form__container-error">Este campo no es valido</span>
                 </div>
                 <div class="form__container">
-                    <input data-precio class="form__container-input" id="form__name" type="text" name="precio" placeholder="Precio del producto" required >
+                    <input data-precio id="precioProducto" class="form__container-input" id="form__name" type="text" name="precio" placeholder="Precio del producto" required >
                     <span class="form__container-error">Este campo no es valido</span>
                 </div>
                 <div class="form__container">
@@ -101,7 +101,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../js/drag_drop.js"></script>
-    <script type="module" src="../controllers/agregar_controller.js"></script>
+    <script type="module" src="../js/drag_drop.js"></script>
+    <script type="module" src="../controllers/actualizar_produc.js"></script>
 </body>
 </html>

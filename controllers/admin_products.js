@@ -6,7 +6,7 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
     const contenido = `
         <div>
             <a class="producto__container__contenido__admin-a" id="${id}"><img src="../assets/delete.svg"></a>
-            <a><img src="../assets/edit.svg"></a>
+            <a href="../pages/editar_producto.html?id=${id}"><img src="../assets/edit.svg"></a>
             <img class="producto__container__contenido--img" src="${imagen}" alt="">
         </div>
         <p class="producto__container__contenido-pro">${nombre}</p>

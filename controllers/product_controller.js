@@ -23,7 +23,7 @@ const mostrarProductos = async () => {
     const data = await productServices.listaProductos();
         data.forEach(({nombre, precio, descripcion, imagen, id, categoria}) =>{
             //Mostrar productos en el index
-            if(categoria === "Celulares"){
+            if(categoria === "Télefono"){
                 const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
                 celulares.append(nuevoProducto);
             }
