@@ -1,8 +1,31 @@
 /* Header */
 
+
+/* Header */
+
 .header{
     margin: 0 4%;
 }
+
+.header__container{
+    height: 4.5rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.header__container--login{
+    font-size: 0.875rem;
+    font-family: var(--open-sans);
+    font-weight: 600;
+    color: var(--color-azul);
+    border: 1px solid var(--color-azul, #2A7AE4);
+}
+
+.header__container--login-a{
+    color: var(--color-azul);
+}
+
 
 .header__container{
     display: flex;
@@ -14,4 +37,94 @@
 .header__container__img{
     display: flex;
     align-items: center;
+}
+
+.header__container2{
+    display: none;
+}
+
+.filter{
+    /* visibility: hidden;
+    opacity: 0;
+    order: 1; */
+    display: none;
+}
+
+.header__container-input{
+    outline: none;
+    height: 1.5rem;
+    border-radius: .5rem;
+    color: #fff;
+    border: none;
+    background-color: rgb(87, 87, 87);
+}
+
+.header__container-input::placeholder{
+    color: rgb(255, 255, 255);
+    padding: 0 1rem;
+}
+
+.header__container{
+    outline: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__container:first-child{
+    justify-content: space-evenly;
+}
+
+
+@media (min-width: 760px) {
+    .header{
+        height: 3rem;
+    }
+    .header__container2{
+        display: flex;
+        justify-content: space-around;
+    }
+    .header__container{
+        display: none;
+    }
+    .header__container2__contenido{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    .header__container2__contenido-input{
+        outline: none;
+        height: 1.9rem;
+        width: 15rem;
+        border-radius: .9rem;
+        color: #fff;
+        border: none;
+        background-color: rgb(156, 156, 156);
+    }
+    .header__container2__contenido-input::placeholder{
+        color: rgb(255, 255, 255);
+        padding: 0 2.5rem;
+    }
+    .header__container2-btn{
+        padding: 1rem 4rem;
+        color: var(--color-azul);
+        border: 1px solid var(--color-azul, #2A7AE4);
+    }
+    .header__container2__contenido__img{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 760px){
+    .header__container2__contenido-input{
+        width: 22rem;
+    }
+    .header__container2__contenido-input::placeholder{
+        padding: 0 5.6rem;
+        font-size: 1rem;
+    }
+    .header{
+        height: 4rem;
+        margin-top: 1rem;
+    }
 }

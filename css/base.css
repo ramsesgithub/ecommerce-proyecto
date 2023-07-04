@@ -17,8 +17,20 @@ body{
 a{
     color: var(--color-azul);
     cursor: pointer;
+    font-weight: 900;
 }
 
 section{
     padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+    section{
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+    footer{
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
 }
