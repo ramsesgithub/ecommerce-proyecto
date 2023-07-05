@@ -43,12 +43,6 @@
     display: none;
 }
 
-.filter{
-    /* visibility: hidden;
-    opacity: 0;
-    order: 1; */
-    display: none;
-}
 
 .header__container-input{
     outline: none;

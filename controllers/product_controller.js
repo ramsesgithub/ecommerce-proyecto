@@ -18,6 +18,7 @@ export const crearProducto = (nombre, precio, id, imagen, categoria, descripcion
 const celulares = document.getElementById("container1");
 const notebooks = document.getElementById("container2");
 const tablets = document.getElementById("container3");
+const otro = document.getElementById("container4");
 
 const mostrarProductos = async () => {
     const data = await productServices.listaProductos();
@@ -34,6 +35,11 @@ const mostrarProductos = async () => {
             else if(categoria === "Tablet"){
                 const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
                 tablets.append(nuevoProducto);
+            }
+            else if(categoria === "Otro"){
+                const nuevoProducto = crearProducto(nombre, precio, descripcion, imagen, id, categoria);
+                otro.style.display="flex";
+                otro.append(nuevoProducto);
             }
         });
 }

@@ -18,19 +18,33 @@
 <body>
     <header class="header">
         <div class="header__container">
-            <div class="header__container__img">
-                <a href="../index.html"><img src="../assets/sports_esports_black_24dp 1.png" alt=""></a>
-                <a href="../index.html"><img src="../assets/Texto.png" alt=""></a>
+            <a href="../index.html"><img src="../assets/Logo.png" alt="Logo AluraGeek"></a>
+            <button class="header__container--login boton"><a class="header__container--login-a" href="./login.html">Login</a></button>
+        </div>
+        <div class="header__container">
+            <input type="text" placeholder="¿Qué estás buscando?" class="header__container-input buscar">
+            <img src="../assets/Icone.png" alt="">
+        </div>
+        <div class="header__container2">
+            <div class="header__container2__contenido">
+                <div class="header__container2__contenido__img">
+                    <a class="header__container2__contenido__img" href="../index.html">
+                        <img src="../assets/sports_esports_black_24dp 1.svg" alt="Logo AluraGeek">
+                        <img src="../assets/Texto.svg" alt="Logo AluraGeek"> 
+                    </a>
+                </div>
+                <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container2__contenido-input buscar">
             </div>
+            <a href="./login.html" class="header__container2-btn">Login</a>
         </div>
     </header>
     <main>
         <section class="login">
             <h2 class="login__sesion">Iniciar Sesión</h2>
-            <formss class="login__form">
-                <input class="login__form--input" type="text" placeholder="Escriba su email">
-                <input class="login__form--input" type="text" placeholder="Escriba su contraseña">
-                <a href="../pages/admin_productos.html"><button class="login__form--boton boton" type="submit">Entrar</button></a>   
+            <form class="login__form">
+                <input class="login__form--input" id="email" type="email" placeholder="Escriba su email">
+                <input class="login__form--input" id="password" type="password" placeholder="Escriba su contraseña">
+                <a class="login__form--boton">Entrar</a>   
             </form>
         </section>
     </main>
@@ -38,20 +52,20 @@
         <div class="footer">
             <div class="footer__contenido">
                 <div class="footer__contenido__img">
-                    <img src="./assets/sports_esports_black_24dp 1.svg" alt="">
-                    <img src="./assets/Texto.svg" alt="">
+                    <img src="../assets/sports_esports_black_24dp 1.svg" alt="">
+                    <img src="../assets/Texto.svg" alt="">
                 </div>
                 <div class="footer__contenido__parrafo">
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Quienes Somos</p>
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Política de privacidad</p>
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Programa de fidelidad</p>
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Nuestras tiendas</p>
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Quiero ser franquiciado</p>
-                    <a href="./login.html" class="footer__contenido__parrafo--des">Anúncie aqui</p>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Quienes Somos</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Política de privacidad</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Programa de fidelidad</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Nuestras tiendas</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Quiero ser franquiciado</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Anúncie aqui</a>
                 </div>
             </div>
             <div class="footer__contacto">
-                <h3>Hable con nosotros</h3>
+                <h3 class="footer__contacto--hable">Hable con nosotros</h3>
                 <form class="footer__contacto__form">  
                     <div class="footer__contacto__form__container">
                         <input class="footer__contacto__form__container-nom form-input" data-tipo="nombre" type="text" id="name" required  pattern="[a-zA-Z ]{2,50}" placeholder="Nombre">            
@@ -68,12 +82,13 @@
         <div class="rodapie">
             <p class="rodapie--p">Desarrollado por Ramsés Quinteros 2023 </p>
             <div class="rodapie__contacto">
-                <a href="https://github.com/ramsesgithub" target="_blank"><img src="../assets/GitHub.svg"></a>
-                <a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="../assets/LinkedIn.svg"></a>
+                <a href="https://github.com/ramsesgithub" target="_blank"><img src="../assets/GitHub.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="../assets/LinkedIn.svg" alt=""></a>
             </div>
         </div>
-    </footer>
+    </footer>   
     <script type="module" src="../controllers/login_service.js"></script>
     <script type="module" src="../js/formularios.js"></script>
+    <script type="module" src="../controllers/login_service.js"></script>
 </body>
 </html>

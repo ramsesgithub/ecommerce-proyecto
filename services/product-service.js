@@ -1,4 +1,6 @@
 const listaProductos = async () => {const data = await fetch("http://localhost:3000/productos"); return data.json();} 
+const listaPerfil = async () => {const data = await fetch("http://localhost:3000/perfil"); return data.json();} 
+
 
 const crearProducto = (nombre, precio, descripcion, imagen, categoria) => {
     return fetch("http://localhost:3000/productos",{
@@ -43,4 +45,5 @@ export const productServices = {
     detalleProducto,
     eliminarProducto,
     editarProducto,
+    listaPerfil
 }

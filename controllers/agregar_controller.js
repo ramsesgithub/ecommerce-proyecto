@@ -12,7 +12,7 @@ form.addEventListener("submit", e =>{
     productServices.crearProducto(nombre, precio, descripcion, imagen, categoria)
     .then(()=>{
         alert(`PRODUCTO AGREGADO CORRECTAMENTE`);
-        location.href="../pages/todos_productos.html";
+        location.href = "./todos_productos.html";
     })
     .catch(error => console.log(error))
 });

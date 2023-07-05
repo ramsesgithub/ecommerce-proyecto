@@ -2,7 +2,7 @@ import { productServices } from "../services/product-service.js";
 
 const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) => {
     const div = document.createElement("div");
-    div.classList.add("producto__container__contenido__admin");
+    div.classList.add("producto__container__contenido__admin", "card");
     const contenido = `
         <div>
             <a class="producto__container__contenido__admin-a" id="${id}"><img src="../assets/delete.svg"></a>

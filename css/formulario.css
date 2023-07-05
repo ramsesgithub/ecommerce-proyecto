@@ -50,7 +50,6 @@
 
 .footer__contacto__form__container--invalid .footer__contacto__form__container-err {
     display: block;
-    margin-bottom: 12px;
     font-family: var(--montserrat);
     font-size: 1.08rem;
     color: #fa0d0d;
@@ -58,6 +57,7 @@
 
 
 .footer__contacto__form__container-btn{
+    cursor: pointer;
     background: var(--color-azul);
     border: none;
     height: 2rem;
