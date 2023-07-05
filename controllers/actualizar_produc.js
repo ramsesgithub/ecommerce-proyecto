@@ -13,7 +13,6 @@ const obtenerInformacionProducto = async () => {
         alert(`ERROR URL`);
     }
 
-
     const categoria = document.getElementById("selectProductos");
     const nombreProducto = document.getElementById("nombreProducto");
     const precio = document.getElementById("precioProducto");
@@ -53,6 +52,7 @@ form.addEventListener("submit", e =>{
     const imagen = document.querySelector(".form__agregar__area-img").src;
 
     productServices.editarProducto(nombreProducto, precio, descripcion, imagen, id, categoria).then(()=>{
+        location.href="../pages/admin_productos.html";
         alert("PRODUCTO EDITADO CORRECTAMENTE");
-    })
+    }).catch(e=>console.log(e))
 })

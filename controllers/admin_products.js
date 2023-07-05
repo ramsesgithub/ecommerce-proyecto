@@ -18,7 +18,7 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
     /* Funcion eliminar producto */
     aEliminar.addEventListener("click", e => {
         const id = aEliminar.id;
-        let confirmar = confirm(`DESEAS ELIMIANR ${nombre} ? `);
+        let confirmar = confirm(`¿Quieres borrar el producto ${nombre}? `);
         if(confirmar) productServices.eliminarProducto(id);
     });
 

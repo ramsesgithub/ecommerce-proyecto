@@ -6,9 +6,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-size: cover;
+    background-size:cover;
     background-position: center;
-    background-image: url("../assets/hero.jpg");
+    background-image: url("../assets/hero3.jpg");
 }
 
 .hero__container{

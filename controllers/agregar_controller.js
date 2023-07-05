@@ -9,10 +9,8 @@ form.addEventListener("submit", e =>{
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
     const descripcion = document.querySelector("[data-descripcion]").value;
-    productServices.crearProducto(nombre, precio, descripcion, imagen, categoria)
-    .then(()=>{
+    productServices.crearProducto(nombre, precio, descripcion, imagen, categoria).then(()=>{
         alert(`PRODUCTO AGREGADO CORRECTAMENTE`);
-        location.href = "./todos_productos.html";
-    })
-    .catch(error => console.log(error))
+        location="../pages/admin_productos.html";
+    }).catch(e=>console.log(e))
 });

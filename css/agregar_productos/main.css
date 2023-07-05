@@ -24,7 +24,7 @@
 
 .form__agregar__area-img{
     max-height: 90%;
-    max-width: 70%; 
+    max-width: 50%; 
     border-radius:.8rem
 }
 
@@ -125,6 +125,9 @@
     .form__container{
         align-items: center;
     }
+    .form__agregar__area-img{
+        max-width: 40%;
+    }
 }
 
 @media (min-width:1024px){
@@ -152,5 +155,8 @@
     }
     .active{
         border: 5px dashed #0beb1d;
+    }
+    .form__agregar__area-img{
+        max-width: 80%;
     }
 }
