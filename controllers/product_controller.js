@@ -1,6 +1,6 @@
 import { productServices } from "../services/product-service.js";
 
-export const crearProducto = (nombre, precio, id, imagen, categoria, descripcion) => {
+export const crearProducto = (nombre, precio, descripcion, imagen, id, categoria) => {
     const div = document.createElement("div");
     div.classList.add("producto__container__contenido","card");
     const contenido = `
@@ -9,7 +9,7 @@ export const crearProducto = (nombre, precio, id, imagen, categoria, descripcion
         </div>
         <p class="producto__container__contenido-pro">${nombre}</p>
         <p class="producto__container__contenido-pre">$ ${precio}</p>
-        <a class="producto__container__contenido-ver" id="${id}">Ver producto</a>
+        <a href="../pages/ver-producto.html?id=${id}" class="producto__container__contenido-ver" id="${id}">Ver producto</a>
     `
     div.innerHTML = contenido;
     return div;

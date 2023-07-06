@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto | AluraGeek</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/ver_producto/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="shortcut icon" href="../assets/sports_esports_black_24dp 1.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html"><img src="../assets/Logo.png" alt="Logo AluraGeek"></a>
+            <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container-input buscar">
+        </div>
+        <div class="header__container2">
+            <div class="header__container2__contenido">
+                <div class="header__container2__contenido__img">
+                    <a class="header__container2__contenido__img" href="../index.html">
+                        <img src="../assets/sports_esports_black_24dp 1.svg" alt="Logo AluraGeek">
+                        <img src="../assets/Texto.svg" alt="Logo AluraGeek"> 
+                    </a>
+                </div>
+                <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container2__contenido-input buscar">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="producto">
+            <div class="producto__container"></div>
+        </section>
+        <section class="similares">
+            <h2 class="similares_h2">Productos Similares</h2>
+            <div class="similares__container"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__contenido">
+                <div class="footer__contenido__img">
+                    <img src="../assets/sports_esports_black_24dp 1.svg" alt="">
+                    <img src="../assets/Texto.svg" alt="">
+                </div>
+                <div class="footer__contenido__parrafo">
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Quienes Somos</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Política de privacidad</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Programa de fidelidad</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Nuestras tiendas</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Quiero ser franquiciado</a>
+                    <a href="./error404.html" class="footer__contenido__parrafo--des">Anúncie aqui</a>
+                </div>
+            </div>
+            <div class="footer__contacto">
+                <h3 class="footer__contacto--hable">Hable con nosotros</h3>
+                <form class="footer__contacto__form">  
+                    <div class="footer__contacto__form__container">
+                        <input class="footer__contacto__form__container-nom form-input" data-tipo="nombre" type="text" id="name" required  pattern="[a-zA-Z ]{2,50}" placeholder="Nombre">            
+                        <span class="footer__contacto__form__container-err">Este campo no es valido</span>
+                    </div>           
+                    <div class="footer__contacto__form__container">
+                        <textarea class="footer__contacto__form__container-men form-input" data-tipo="mensaje" id="mesagge" required placeholder="Escribe tu mensaje"></textarea>        
+                        <span class="footer__contacto__form__container-err">Este campo no es valido</span>
+                    </div>
+                        <button class="footer__contacto__form__container-btn">Enviar mensaje</button>         
+                </form>
+            </div>
+        </div>
+        <div class="rodapie">
+            <p class="rodapie--p">Desarrollado por Ramsés Quinteros 2023 </p>
+            <div class="rodapie__contacto">
+                <a href="https://github.com/ramsesgithub" target="_blank"><img src="../assets/GitHub.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="../assets/LinkedIn.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controllers/ver_producto.js"></script>
+    <script src="../js/formularios.js"></script>
+</body>
+</html>

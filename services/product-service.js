@@ -1,5 +1,7 @@
 const listaProductos = async () => {const data = await fetch("http://localhost:3000/productos"); return data.json();} 
 const listaPerfil = async () => {const data = await fetch("http://localhost:3000/perfil"); return data.json();} 
+const verProducto = async (id) => {const data = await fetch(`http://localhost:3000/productos/${id}`); return data.json();} 
+
 
 
 const crearProducto = (nombre, precio, descripcion, imagen, categoria) => {
@@ -20,7 +22,7 @@ const eliminarProducto = (id) => {
 };
 
 
-const detalleProducto= id => {
+const detalleProducto = id => {
     return fetch(`http://localhost:3000/productos/${id}`).then(responde => responde.json())
 }
 
@@ -45,5 +47,6 @@ export const productServices = {
     detalleProducto,
     eliminarProducto,
     editarProducto,
-    listaPerfil
+    listaPerfil,
+    verProducto
 }
