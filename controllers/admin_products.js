@@ -18,8 +18,18 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
     /* Funcion eliminar producto */
     aEliminar.addEventListener("click", e => {
         const id = aEliminar.id;
-        let confirmar = confirm(`¿Quieres borrar el producto ${nombre}? `);
-        if(confirmar) productServices.eliminarProducto(id);
+        Swal.fire({
+            title: `¿Deseas eliminar el producto ${nombre}?`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Eliminar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                productServices.eliminarProducto(id);
+            }
+        })
     });
 
     return div;

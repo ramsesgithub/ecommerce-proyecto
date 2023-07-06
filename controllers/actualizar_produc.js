@@ -42,6 +42,7 @@ obtenerInformacionProducto();
 
 form.addEventListener("submit", e =>{
     e.preventDefault();
+
     const url = new URL(location);
     const id = url.searchParams.get("id");
 
@@ -52,7 +53,13 @@ form.addEventListener("submit", e =>{
     const imagen = document.querySelector(".form__agregar__area-img").src;
 
     productServices.editarProducto(nombreProducto, precio, descripcion, imagen, id, categoria).then(()=>{
-        location.href="../pages/admin_productos.html";
-        alert("PRODUCTO EDITADO CORRECTAMENTE");
-    }).catch(e=>console.log(e))
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'Producto Editado Correctamente :)',
+            showConfirmButton: false,
+            timer: 1000,
+        })
+        location.href = "../pages/admin_productos.html";
+    }).catch(e=>console.log(e));
 })

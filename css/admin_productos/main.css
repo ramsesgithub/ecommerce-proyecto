@@ -17,6 +17,7 @@
 .producto__container__admin{
     margin-top: 1rem;
     display: flex;
+    padding: 1rem 0;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;

@@ -10,12 +10,18 @@
     flex-direction: column;
 }
 
-.producto__container__contenido-pro{
+.producto__container__contenido__descripcion{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.producto__container__contenido__descripcion-pro{
     font-size: 1.2rem;
     font-family: var(--roboto);
     font-weight: 800;
 }
-.producto__container__contenido-pre{
+.producto__container__contenido__descripcion-pre{
     font-size: 1rem;
     font-family: sans-serif;
     font-weight: 500;
@@ -29,6 +35,9 @@
     display: flex;
     justify-content: center;
 }
+
+
+
 
 /* Products similares */
 .similares_h2{
@@ -78,4 +87,36 @@
 .similares__container__contenido-ver{
     font-size: .7rem;
     font-family: var(--open-sans);
+}
+
+
+
+/* MEDIA */
+
+@media (min-width:768px){
+    .similares__container{
+        grid-template-columns: repeat(4,auto);
+    }
+    .similares__container__contenido-pro{
+        font-size: 1.1rem;
+    }
+    .similares__container__contenido-pre{
+        font-size: 1rem;
+    }
+    .similares__container__contenido-ver{
+        font-size: .9rem;
+    }
+    .producto__container__contenido{
+        flex-direction: row;
+        align-items: center;
+    }
+    .producto__container__contenido--img{
+        width: 20rem;
+    }
+}
+
+@media (min-width:1024px){
+    .producto__container__contenido--img{
+        width: 30rem;
+    }
 }

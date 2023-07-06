@@ -6,8 +6,15 @@ const mostrarClientes = async (emailUsuario, passwordUsuario) => {
     const data = await productServices.listaPerfil();
     data.forEach(({email, password}) => {
         if(email === emailUsuario && password === passwordUsuario){
-            alert("SESION INICIADA");
-            location.href="../pages/admin_productos.html";
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: 'Iniciando Sesion...',
+                showConfirmButton: false,
+                timer: 2000,
+            }).then(function() {
+                window.location.href = "../pages/admin_productos.html";
+            });
         }
     })      
 }
@@ -18,4 +25,11 @@ form.addEventListener("click", e =>{
     let emailUsuario = document.getElementById("email").value;
     let passwordUsuario = document.getElementById("password").value;
     mostrarClientes(emailUsuario, passwordUsuario);
+    Swal.fire({
+        position: 'top',
+        icon: 'error',
+        title: 'Correo y/o contraseña incorrecto',
+        showConfirmButton: false,
+        timer: 1500,
+    })
 })
