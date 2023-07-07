@@ -9,7 +9,7 @@ export const crearProducto = (nombre, precio, descripcion, imagen, id, categoria
         </div>
         <p class="producto__container__contenido-pro">${nombre}</p>
         <p class="producto__container__contenido-pre">$ ${precio}</p>
-        <a href="./pages/ver-producto.html?id=${id}" class="producto__container__contenido-ver" id="${id}">Ver producto</a>
+        <a href="../pages/ver-producto.html?id=${id}" class="producto__container__contenido-ver" id="${id}">Ver producto</a>
     `
     div.innerHTML = contenido;
     return div;
