@@ -1,6 +1,6 @@
 import { productServices } from "../services/product-service.js";
 
-const form = document.querySelector(".login__form--boton");
+const form = document.querySelector(".login__form");
 
 const mostrarClientes = async (emailUsuario, passwordUsuario) => {
     const data = await productServices.listaPerfil();
@@ -16,20 +16,22 @@ const mostrarClientes = async (emailUsuario, passwordUsuario) => {
                 window.location.href = "../pages/admin_productos.html";
             });
         }
-    })      
+    })
 }
 
 
-form.addEventListener("click", e =>{
+
+form.addEventListener("submit", e =>{
     e.preventDefault();
     let emailUsuario = document.getElementById("email").value;
     let passwordUsuario = document.getElementById("password").value;
-    mostrarClientes(emailUsuario, passwordUsuario);
-    Swal.fire({
-        position: 'top',
-        icon: 'error',
-        title: 'Correo y/o contraseña incorrecto',
-        showConfirmButton: false,
-        timer: 1500,
-    })
+    if((mostrarClientes(emailUsuario, passwordUsuario))){
+        Swal.fire({
+            position: 'top',
+            icon: 'error',
+            title: 'Email y/o contraseña incorrecto',
+            showConfirmButton: false,
+            timer: 1500,
+        })
+    }
 })

@@ -25,9 +25,9 @@ const crearProductoAdmin = (nombre, precio, descripcion, imagen, id, categoria) 
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, Eliminar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                productServices.eliminarProducto(id);
+        }).then(function(result){
+            if(result.isConfirmed) {
+                productServices.eliminarProducto(id).then(()=>location.reload())
             }
         })
     });

@@ -17,10 +17,14 @@ form.addEventListener("submit", e =>{
             title: 'Producto Agregado Correctamente :)',
             showConfirmButton: false,
             timer: 1500,
-        });
-        location.href = "../pages/admin_productos.html";
+        }).then(()=>{
+            location.href = "../pages/admin_productos.html";
+        })
     });
 });
+
+
+
 
 
 // form.addEventListener("submit", e =>{

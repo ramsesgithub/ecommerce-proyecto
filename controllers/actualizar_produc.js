@@ -58,8 +58,9 @@ form.addEventListener("submit", e =>{
             icon: 'success',
             title: 'Producto Editado Correctamente :)',
             showConfirmButton: false,
-            timer: 1000,
+            timer: 1500,
+        }).then(()=>{
+            location.href = "../pages/admin_productos.html";
         })
-        location.href = "../pages/admin_productos.html";
-    }).catch(e=>console.log(e));
+    });
 })
