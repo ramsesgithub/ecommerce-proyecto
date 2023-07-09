@@ -10,13 +10,19 @@
     <link rel="stylesheet" href="../css/ver_producto/main.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="../css/loader/style.css">
     <link rel="shortcut icon" href="../assets/sports_esports_black_24dp 1.svg" type="image/x-icon">
 </head>
 <body>
+    <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>
     <header class="header">
         <div class="header__container">
             <a href="../index.html"><img src="../assets/Logo.png" alt="Logo AluraGeek"></a>
-            <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container-input buscar">
+            <button class="header__container--login boton"><a class="header__container--login-a" href="./login.html">Login</a></button>
+        </div>
+        <div class="header__container">
+            <input type="text" placeholder="¿Qué estás buscando?" class="header__container-input buscar" id="buscar">
+            <img src="../assets/Icone.png" alt="">
         </div>
         <div class="header__container2">
             <div class="header__container2__contenido">
@@ -26,8 +32,9 @@
                         <img src="../assets/Texto.svg" alt="Logo AluraGeek"> 
                     </a>
                 </div>
-                <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container2__contenido-input buscar">
+                <input type="text" placeholder="¿Qué estás buscando? 🔍" class="header__container2__contenido-input buscar" id="buscar">
             </div>
+            <a href="./login.html" class="header__container2-btn">Login</a>
         </div>
     </header>
     <main>

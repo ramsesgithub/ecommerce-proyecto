@@ -11,4 +11,8 @@ const mostrarTodosProductos = async () =>{
     })
 } 
 
-mostrarTodosProductos();
+const loader = document.getElementById("loader");
+mostrarTodosProductos().then(()=>{ 
+    //eliminar loader una vez cargados los productos
+    loader.classList.remove("loader","lds-ring")
+});;

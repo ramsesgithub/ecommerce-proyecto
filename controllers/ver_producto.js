@@ -21,18 +21,23 @@ const verProducto = (nombre, precio, descripcion, imagen, id, categoria) => {
 
 
 const container = document.querySelector(".producto__container");
+const loader = document.getElementById("loader");
 
 const mostrarProducto = async (id) => {
     const data = await productServices.verProducto(id);
     const nuevoProducto = verProducto(data.nombre, data.precio, data.descripcion, data.imagen, data.id, data.categoria);
     console.log(data.id);
-    mostrarSimilares(data.categoria, data.id);
+    mostrarSimilares(data.categoria, data.id).then(()=>{
+        //eliminar loader una vez cargados los productos
+        loader.classList.remove("loader","lds-ring")
+    });
     container.appendChild(nuevoProducto);
 }
 
 const url = new URL(location);
 //busca el parametro que le digamos en la url 
 const id = url.searchParams.get("id");
+
 
 mostrarProducto(id);
 

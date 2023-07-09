@@ -19,6 +19,7 @@ const celulares = document.getElementById("container1");
 const notebooks = document.getElementById("container2");
 const tablets = document.getElementById("container3");
 const otro = document.getElementById("container4");
+const loader = document.getElementById("loader");
 
 const mostrarProductos = async () => {
     const data = await productServices.listaProductos();
@@ -42,7 +43,10 @@ const mostrarProductos = async () => {
                 otro.append(nuevoProducto);
             }
         });
+    
 }
 
-mostrarProductos();
+mostrarProductos().then(()=>{
+    loader.classList.remove("loader","lds-ring")
+});
 
