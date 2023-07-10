@@ -31,11 +31,7 @@ section{
 }
 
 @media (min-width: 1024px) {
-    section{
-        padding-left: calc((100% - 940px)/2);
-        padding-right: calc((100% - 940px)/2);
-    }
-    footer{
+    section, footer{
         padding-left: calc((100% - 940px)/2);
         padding-right: calc((100% - 940px)/2);
     }

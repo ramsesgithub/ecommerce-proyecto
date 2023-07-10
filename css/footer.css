@@ -121,6 +121,7 @@ footer{
 
 @media (min-width: 760px){
     .footer{
+        align-items: center;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -128,6 +129,19 @@ footer{
         width: 55%;
     }
     .footer__contenido__parrafo--des{
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .footer__contenido{
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
+    }
+    .footer{
+        justify-content: space-between;
+        padding: 1rem 0;
     }
 }
