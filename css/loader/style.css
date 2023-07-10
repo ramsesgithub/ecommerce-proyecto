@@ -39,11 +39,16 @@
 .loader{
     background-color: #464646a6;
     width: 100%;
-    margin-top: -16px;
     height: 100vh;
     z-index: 1000000000;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width:768px){
+  .loader{
+    margin-top: -16px;
+  }
 }
